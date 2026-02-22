@@ -1537,7 +1537,6 @@ function showTab(tab) {
     allMenus.forEach(m => m.classList.remove('show'));
     
     document.getElementById('content-home').style.display = 'none';
-    document.getElementById('content-card-search').style.display = 'none';
     document.getElementById('content-add-collection').style.display = 'none';
     document.getElementById('content-my-collection').style.display = 'none';
     document.getElementById('content-add-sale').style.display = 'none';
@@ -1546,12 +1545,9 @@ function showTab(tab) {
     document.getElementById('content-stock-add').style.display = 'none';
     document.getElementById('content-stock-list').style.display = 'none';
     document.getElementById('content-stock-lots').style.display = 'none';
-    document.getElementById('content-mentions-legales').style.display = 'none';
 
     if (tab === 'home') {
         document.getElementById('content-home').style.display = 'block';
-    } else if (tab === 'card-search') {
-        document.getElementById('content-card-search').style.display = 'block';
     } else if (tab === 'add-collection') {
         document.getElementById('content-add-collection').style.display = 'block';
     } else if (tab === 'my-collection') {
@@ -1574,8 +1570,6 @@ function showTab(tab) {
         document.getElementById('content-stock-lots').style.display = 'block';
         updateLotSelect();
         renderLotsTable();
-    } else if (tab === 'mentions-legales') {
-        document.getElementById('content-mentions-legales').style.display = 'block';
     }
 }
 
